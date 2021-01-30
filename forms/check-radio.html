@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Checkbox ve Radio Buton (check and radio)</title>
+
+</head>
+<body>
+
+<div class="container my-5">
+
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+
+            <form action="">
+
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="araba" disabled>
+                    <label for="araba" class="form-check-label">
+                        Araba
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="belirsiz">
+                    <label for="belirsiz" class="form-check-label">
+                        Belirsiz
+                    </label>
+                </div>
+
+                <hr>
+
+                <div class="form-check">
+                    <input name="cinsiyet" type="radio" class="form-check-input" id="erkek" disabled>
+                    <label for="erkek" class="form-check-label">
+                        Erkek
+                    </label>
+                </div>
+
+                <div class="form-check form-switch">
+                    <input name="cinsiyet" type="checkbox" class="form-check-input" id="kadin">
+                    <label for="kadin" class="form-check-label">
+                        Kadın
+                    </label>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+
+<script>
+
+    var belirsiz = document.getElementById("belirsiz");
+    belirsiz.indeterminate = true;
+
+
+</script>
+
+</body>
+</html>
