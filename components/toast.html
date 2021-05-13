@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>Tost Mesajlar (Toast)</title>
+</head>
+<body>
+
+<div class="container my-5">
+
+    <div class="row">
+        <div class="col-md-3">
+
+            <button class="btn btn-primary" id="toastBtn">Mesajı göster</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="position-fixed top-50 start-50 translate-middle p-3" style="z-index: 5">
+
+    <div class="toast-container">
+
+        <div class="toast hide" data-bs-autohide="false">
+            <div class="toast-header">
+                Tost Mesaj Başlık
+                <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Merhaba ben bir tost mesajım!
+            </div>
+        </div>
+
+        <div class="toast hide">
+            <div class="toast-header">
+                Tost Mesaj Başlık
+                <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Merhaba ben bir tost mesajım!
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+<script>
+
+    document.getElementById("toastBtn").onclick = function () {
+        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        var toastList = toastElList.map(function (toastEl) {
+            return new bootstrap.Toast(toastEl).show();
+        })
+    }
+
+
+
+
+</script>
+
+</body>
+</html>
